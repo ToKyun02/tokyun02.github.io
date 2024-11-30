@@ -9,7 +9,8 @@ const BestItem = () => {
   const tabletWidth = useMediaQuery({
     query: '(min-width: 769px) and (max-width: 1200px)',
   });
-  const [cardCnt, setCardCnt] = useState(4);
+  // const [cardCnt, setCardCnt] = useState(4);
+  const [cardCnt, setCardCnt] = useState(mobileWidth ? 1 : tabletWidth ? 2 : 4);
   const [cards, setCards] = useState([]);
 
   const getProduct = async () => {
