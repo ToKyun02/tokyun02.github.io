@@ -21,7 +21,7 @@
 .cardWrapper {
   perspective: 1500px;
   cursor: pointer;
-  height: 400px;
+  height: 500px;
 }
 
 .card {
@@ -34,6 +34,7 @@
 .cardFront,
 .cardBack {
   position: absolute;
+  overflow: auto;
   width: 100%;
   height: 100%;
   background: white;
@@ -45,7 +46,6 @@
 .imageWrapper {
   width: 100%;
   height: 200px;
-  overflow: hidden;
 }
 
 .imageWrapper img {
@@ -104,6 +104,7 @@
 }
 
 .viewButton {
+  width: 100%;
   background: white;
   color: #4ecdc4;
   border: none;
@@ -118,8 +119,15 @@
   transform: scale(1.05);
 }
 
+.viewButtonGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .cardWrapper {
-    height: 350px;
+    height: 400px;
   }
 }

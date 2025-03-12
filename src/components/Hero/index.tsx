@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import styles from "./hero.module.css";
+import { motion } from 'motion/react';
+import styles from './hero.module.css';
 
 export default function Hero() {
   return (
@@ -29,30 +29,20 @@ export default function Hero() {
         >
           Frontend Developer
         </motion.h2>
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
-          className={styles.cta}
-        >
-          <a href="#contact" className={styles.button}>
-            Get in Contact
-          </a>
-        </motion.div>
       </motion.div>
       <motion.div
         className={styles.background}
         animate={{
           background: [
-            "linear-gradient(45deg,rgb(249, 182, 255),rgb(78, 205, 196))",
-            "linear-gradient(45deg,rgb(78, 205, 196),rgb(69, 183, 209))",
-            "linear-gradient(45deg,rgb(69, 183, 209), rgb(249, 182, 255))",
+            'linear-gradient(45deg,rgb(249, 182, 255),rgb(78, 205, 196))',
+            'linear-gradient(45deg,rgb(78, 205, 196),rgb(69, 183, 209))',
+            'linear-gradient(45deg,rgb(69, 183, 209), rgb(249, 182, 255))',
           ],
         }}
         transition={{
           duration: 10,
           repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
+          repeatType: 'reverse',
         }}
       />
     </section>

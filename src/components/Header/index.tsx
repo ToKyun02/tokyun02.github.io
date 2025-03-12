@@ -1,24 +1,20 @@
-"use client";
+'use client';
 
-import { motion, useScroll, useTransform } from "motion/react";
-import styles from "./header.module.css";
+import { motion, useScroll, useTransform } from 'motion/react';
+import styles from './header.module.css';
 
 export default function Header() {
   const { scrollY } = useScroll();
-  const background = useTransform(
-    scrollY,
-    [0, 100],
-    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.9)"],
-  );
+  const background = useTransform(scrollY, [0, 100], ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0.9)']);
 
   return (
     <motion.nav style={{ background }} className={styles.nav}>
       <div className={styles.container}>
-        <motion.a href="#" whileHover={{ scale: 1.1 }} className={styles.logo}>
+        <motion.a href='#' whileHover={{ scale: 1.1 }} className={styles.logo}>
           Portfolio
         </motion.a>
         <div className={styles.links}>
-          {["About", "Projects", "Skills", "Contact"].map((item, index) => (
+          {['About', 'Projects', 'Skills'].map((item, index) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}

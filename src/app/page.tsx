@@ -5,8 +5,7 @@ import {
   About,
   Projects,
   Skills,
-  Contact,
-} from "@/components";
+} from '@/components';
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
-      <Contact />
     </>
   );
 }
