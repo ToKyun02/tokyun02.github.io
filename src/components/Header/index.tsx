@@ -14,7 +14,7 @@ export default function Header() {
           Portfolio
         </motion.a>
         <div className={styles.links}>
-          {['About', 'Projects', 'Skills'].map((item, index) => (
+          {['About', 'Projects', 'Skills', 'WorkExperience'].map((item, index) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}

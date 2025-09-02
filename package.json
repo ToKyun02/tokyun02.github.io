@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && touch out/.nojekyll && git add -f out/ && git commit -m \":sparkles: feat : 초안 배포\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "next build && touch out/.nojekyll && git add -f out/ && git commit -m \":sparkles: feat : 수정 배포\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "motion": "^12.4.7",
