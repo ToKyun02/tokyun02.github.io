@@ -10,46 +10,71 @@ const skills = [
       {
         name: 'React & Next.js',
         description:
-          '서버 컴포넌트 및 서버 액션의 기능을 이해하고 있습니다.\nTanStack Query를 사용하여 전역 서버 상태 관리를 합니다.\nReact-Hook-Form과 zod를 사용하여 실시간 form validation 및 Controller를 사용할 줄 압니다.\ngenerateMetadata 등을 활용하여 SEO를 높힙니다.',
+          '서버 컴포넌트·서버 액션을 이해하고 활용합니다.\nTanStack Query의 stale-while-revalidate 전략과 queryKey 계층화로 서버 상태를 관리합니다.\nReact-Hook-Form과 zod 스키마를 단일 진실의 원천으로 활용하여 유효성 규칙·타입·에러 메시지를 한 곳에서 관리합니다.\ngenerateMetadata를 활용하여 페이지별 SEO를 최적화합니다.',
       },
       {
         name: '전역 UI 상태',
-        description: 'zustand나 context API를 사용하여 Toast나 Modal 등 전역 UI 상태를 관리한 경험이 있습니다.',
+        description:
+          'zustand나 Context API를 사용하여 Toast·Modal 등 전역 UI 상태를 관리합니다.\nzustand를 활용한 모달 상태 관리로 컴포넌트 간 의존성을 낮추고 재사용성을 높였습니다.',
       },
       {
         name: 'TypeScript',
         description:
-          'any 타입을 지양합니다. 추론이 힘든 경우에는 unknown 타입으로 대체합니다.\nzod의 스키마와 safeParse를 활용하여 타입 안정성을 높힙니다.',
+          'any 타입을 지양하고, 추론이 어려운 경우 unknown으로 대체합니다.\nzod 스키마와 safeParse를 활용하여 런타임 타입 안정성을 확보합니다.',
       },
       {
         name: 'UX',
         description:
-          '사용자 경험을 중시합니다. Layout Shift, Loading UI(Skeleton UI, Loading Spinner) 등을 고려하여 컴포넌트를 설계합니다.',
+          '사용자 경험을 최우선으로 고려합니다.\nCLS(Cumulative Layout Shift)·Skeleton UI·Loading Spinner 등 Core Web Vitals를 고려하여 컴포넌트를 설계합니다.',
       },
       {
-        name: 'UI',
+        name: 'UI 컴포넌트 설계',
         description:
-          '디자인 시스템에 의거한 UI 컴포넌트를 설계할 줄 압니다. cva() 함수, clsx, taillwind-merge 등을 활용하여 컴포넌트의 재사용성을 높힐 수 있습니다.',
+          'shadcn 설계 방식을 참고하여 variant 기반 공용 컴포넌트를 설계합니다.\ncva()·clsx·tailwind-merge를 활용하여 props 조합만으로 모든 상태를 표현할 수 있는 재사용 가능한 컴포넌트 시스템을 구축합니다.',
       },
     ],
   },
   {
-    category: 'Etc Tools & Others',
+    category: 'Testing & Quality',
+    items: [
+      {
+        name: 'E2E 테스트',
+        description:
+          'Playwright로 Chrome·Firefox·Safari 3개 브라우저 크로스 브라우징 검증을 자동화합니다.\nE2E 테스트를 통해 WebKit의 Secure 쿠키 이슈 등 브라우저별 엣지 케이스를 발견하고 해결한 경험이 있습니다.',
+      },
+      {
+        name: '단위·통합 테스트',
+        description: 'Jest로 컴포넌트 단위 테스트 및 통합 테스트를 작성합니다.',
+      },
+      {
+        name: 'Storybook',
+        description:
+          'MDX를 활용하여 공용 UI 컴포넌트를 시각화·문서화합니다.\n각 컴포넌트의 다양한 상태를 Story로 명세하여 팀 내 시각적 불일치와 회귀를 방지합니다.',
+      },
+      {
+        name: 'Error Monitoring',
+        description:
+          'Sentry를 통해 오류 모니터링을 수행합니다.\n불필요한 에러 리포팅을 개선하고, throw 대신 nullish return handling·토스트 안내로 대체하는 방향을 제안한 경험이 있습니다.',
+      },
+    ],
+  },
+  {
+    category: 'Tools & Collaboration',
     items: [
       {
         name: 'Version Control',
         description:
-          'GitFlow, Github Flow 등 브랜치 관리 전략에 대해 이해하고 있습니다.\n선형적 커밋 히스토리를 관리할 줄 알고 있습니다. 또한, 일반 merge 뿐만 아니라 rebase, squash 병합도 적극 사용합니다.\n동료들과의 코드 리뷰는 상생 및 동시 성장하는 방향이라고 생각합니다.',
+          'GitFlow·GitHub Flow 등 브랜치 전략을 이해하고 적용합니다.\nrebase·squash merge로 선형적 커밋 히스토리를 관리하며, 코드 리뷰를 팀 성장의 핵심으로 여깁니다.',
       },
       {
         name: '일정 및 Task 관리',
         description:
-          'Jira와 Github Projects, Notion 등 협업 관리 툴을 사용할 줄 압니다. Jira와 Github Projects로 이슈 관리를 한 경험이 있으며, Notion을 통해 프로젝트 기간 동안 문서 정리를 한 경험이 있습니다.',
+          'Jira·GitHub Projects·Notion 등 협업 툴을 활용합니다.\nGitHub Actions와 Jira를 연동하여 이슈 자동화 파이프라인을 구축한 경험이 있습니다.',
       },
       {
         name: '스타일링',
         description:
-          'Tailwind, Modern CSS, CSS in JS를 사용할 줄 알고, Mobile First 디자인 원칙을 지켜서 반응형 웹을 구현합니다.',
+          'Tailwind CSS·CSS Modules·CSS-in-JS를 상황에 맞게 사용합니다.\nMobile First 원칙을 지켜 반응형 웹을 구현합니다.',
       },
     ],
   },

@@ -119,15 +119,205 @@
   transform: scale(1.05);
 }
 
-.viewButtonGroup{
+.viewButtonGroup {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   align-items: center;
+}
+
+.detailButton {
+  background: #4ecdc4;
+  color: white;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.detailButton:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* ── 모달 ── */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 85vh;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.modalScrollArea {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modalTitle {
+  font-size: 1.7rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.modalTeam {
+  font-size: 0.85rem;
+  color: #4ecdc4;
+  font-weight: 500;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.closeButton:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.modalTechs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modalTech {
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.12), rgba(69, 183, 209, 0.12));
+  color: #2a9d8f;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.modalDetails {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailItem {
+  border-left: 3px solid #4ecdc4;
+  padding-left: 1rem;
+}
+
+.detailLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.detailIndex {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4ecdc4;
+  background: rgba(78, 205, 196, 0.1);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  flex-shrink: 0;
+}
+
+.detailContent {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.75;
+}
+
+.modalLinks {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 2rem 2rem;
+  border-top: 1px solid #f0f0f0;
+  flex-wrap: wrap;
+}
+
+.modalLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  color: white;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.modalLink:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.githubLink {
+  background: #333;
 }
 
 @media (max-width: 768px) {
   .cardWrapper {
-    height: 400px;
+    height: 480px;
+  }
+
+  .modal {
+    max-height: 90vh;
+  }
+
+  .modalHeader,
+  .modalTechs,
+  .modalDetails,
+  .modalLinks {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .modalLinks {
+    flex-direction: column;
+  }
+
+  .modalLink {
+    text-align: center;
+    justify-content: center;
   }
 }
